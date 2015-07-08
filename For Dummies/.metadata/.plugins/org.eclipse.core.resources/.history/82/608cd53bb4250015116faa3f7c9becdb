@@ -1,0 +1,16 @@
+import javax.swing.JFrame;
+
+
+public class BankAccountFrame extends JFrame {
+	private static final int FRAME_WIDTH = 450;
+	private static final int FRAME_HEIGHT = 450;
+	
+	private static final double InitialBalance = 1000;
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,78 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+
+public class BankAccountFrame extends JFrame {
+	private static final int FRAME_WIDTH = 450;
+	private static final int FRAME_HEIGHT = 450;
+	
+	private static double Balance = 1000;
+	
+	private JButton Deposit, Withdraw;
+	private JLabel BalanceLabel;
+	private JTextField DepositField, WithdrawField;
+	private JPanel Panel;
+	
+	public BankAccountFrame(){
+		BalanceLabel = new JLabel("Balance: " + Balance);	
+		
+		CreateTextField();
+		CreateButton();
+		CreatePanel();
+		
+		setSize(FRAME_WIDTH, FRAME_HEIGHT);
+		
+	}
+	
+	private void CreateTextField(){
+		DepositField = new JTextField("Type the Deposit Amount", 10);
+		WithdrawField = new JTextField("Type the Withdraw Amount",10);
+		
+	}
+	
+	private void CreateButton()
+	{
+		Deposit = new JButton("Deposit");
+		Withdraw = new JButton("Withdraw");
+		
+		class DepositAction implements ActionListener{
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double DepositAmount = Double.parseDouble(DepositField.getText());
+				Balance = Balance + DepositAmount;
+				BalanceLabel.setText("Balance: " + Balance);
+			}
+			
+		}
+		
+		class WithdrawAction implements ActionListener{
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				double WithdrawAmount = Double.parseDouble(WithdrawField.getText());
+				Balance = Balance - WithdrawAmount;
+				BalanceLabel.setText("Balance: " + Balance);
+			}
+			
+		}
+		
+		Deposit.addActionListener(new DepositAction());
+		Withdraw.addActionListener(new WithdrawAction());
+		
+	}
+	
+	private void CreatePanel()
+	{
+		Panel = new JPanel();
+	Panel.add(BalanceLabel);
+	Panel.add(DepositField);
+	Panel.add(Deposit);
+	Panel.add(WithdrawField);
+	Panel.add(Withdraw);
+	add(Panel);
+	}
+
+}
