@@ -1,0 +1,19 @@
+import javax.swing.JButton;
+import javax.swing.*;
+
+
+public class BankAccountFrame extends JFrame {
+	private static final int FRAME_WIDTH = 450;
+	private static final int FRAME_HEIGHT = 450;
+	
+	private static final double InitialBalance = 1000;
+	
+	private JButton Deposit, Withdraw;
+	private JLabel Balance;
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
