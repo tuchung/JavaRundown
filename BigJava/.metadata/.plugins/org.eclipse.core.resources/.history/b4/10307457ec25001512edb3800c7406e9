@@ -1,0 +1,88 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.*;
+public class CalculatorFrame extends JFrame {
+	
+	//initialize
+	JTextField ResultField;
+	JButton One, Two, Three, Four, Five, Six, Seven, 
+	Eight, Nine, Zero, Plus, Minus, Multiply, Divide, CEButton, Equal;
+	JPanel Panel;
+	JPanel ButtonPanel;
+	
+	// create the Constructor
+	public CalculatorFrame()
+	{
+		CreateTextfield();
+		CreateButton();
+		DrawPanel();
+		pack();
+	}
+	
+	//Create the textfield component
+	public void CreateTextfield()
+	{
+		ResultField = new JTextField("0", 20);
+	}
+	
+	//Create the Button Components and it action listener
+	public void CreateButton()
+	{
+		One = new JButton("1");
+		Two = new JButton("2");
+		Three = new JButton("3");
+		Four = new JButton("4");
+		Five = new JButton("5");
+		Six = new JButton("6");
+		Seven = new JButton("7");
+		Eight = new JButton("8");
+		Nine = new JButton("9");
+		Zero = new JButton("0");
+		Plus = new JButton("+");
+		Minus = new JButton("-");
+		Multiply = new JButton("*");
+		Divide = new JButton("/");
+		CEButton = new JButton("CE");
+		Equal = new JButton("=");
+	}
+	
+	public void DrawPanel()
+	{
+		//Customize the overall panel
+		Panel = new JPanel();
+		Panel.setLayout(new BorderLayout());
+		
+		ButtonPanel = new JPanel();
+		ButtonPanel.setLayout(new GridLayout(4,4));
+		//First Row
+		ButtonPanel.add(Seven);
+		ButtonPanel.add(Eight);
+		ButtonPanel.add(Nine);
+		ButtonPanel.add(Plus);
+		//Second
+		ButtonPanel.add(Four);
+		ButtonPanel.add(Five);
+		ButtonPanel.add(Six);
+		ButtonPanel.add(Minus);
+		//Third
+		ButtonPanel.add(One);
+		ButtonPanel.add(Two);
+		ButtonPanel.add(Three);
+		ButtonPanel.add(Multiply);
+		//Fourth
+		ButtonPanel.add(Zero);
+		ButtonPanel.add(CEButton);
+		ButtonPanel.add(Equal);
+		ButtonPanel.add(Divide);
+		
+		//Wrap up the overall panel
+		Panel.add(ResultField, BorderLayout.NORTH);
+		Panel.add(ButtonPanel, BorderLayout.CENTER);
+		
+		add(Panel);
+	}
+	
+	
+
+}
