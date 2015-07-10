@@ -4,7 +4,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-@SuppressWarnings("serial")
 public class ChartsGeneratorFrame extends JFrame {
 	private JLabel Image;
 	private static final int FRAME_WIDTH = 300;
@@ -49,19 +48,14 @@ public class ChartsGeneratorFrame extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				NewItemFrame SubFrame = new NewItemFrame();
-				SubFrame.dispose();
-				SubFrame.setVisible(true);
+				
 				
 			}
 			
 		}
-		NewItem.addActionListener(new NewItemFunction());
-		
 		ItemMenu.add(NewItem);
 		ItemMenu.add(EditItem);
 		ItemMenu.add(RemoveItem);
-		
 		
 		return ItemMenu;
 	}

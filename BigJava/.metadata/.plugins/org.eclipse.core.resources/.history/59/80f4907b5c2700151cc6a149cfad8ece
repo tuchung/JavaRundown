@@ -1,0 +1,77 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class NewItemFrame extends JFrame {
+	private JLabel ItemName, ItemLength, ItemColor;
+	private JButton AddItemButton, CancelButton;
+	private JTextField NameField, LengthField;
+	private JPanel Panel;
+	
+	public NewItemFrame()
+	{
+		setTitle("New Item");
+		CreateLabel();
+		CreateButton();
+		CreateTextField();
+		CreatePanel();
+		pack();
+	}
+	
+	public void CreateLabel()
+	{
+		ItemName = new JLabel("Name: ");
+		ItemLength = new JLabel("Values/Length :");
+		ItemColor = new JLabel("Color: ");
+		
+	}
+	
+	public void CreateButton()
+	{
+		AddItemButton = new JButton("Add Item");
+		CancelButton = new JButton("Cancel");
+		
+		class CancelFunction implements ActionListener
+		{
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				
+			}
+			
+		}
+		CancelButton.addActionListener(new CancelFunction());
+		
+	}
+	
+	public void CreateTextField()
+	{
+		NameField = new JTextField(10);
+		LengthField = new JTextField(10);
+	}
+	
+	public void CreatePanel()
+	{
+		Panel = new JPanel();
+		Panel.setLayout(new BorderLayout());
+		JPanel MainPanel = new JPanel();
+		MainPanel.setLayout(new GridLayout(3,2));
+		MainPanel.add(ItemName);
+		MainPanel.add(NameField);
+		MainPanel.add(ItemLength);
+		MainPanel.add(LengthField);
+		MainPanel.add(ItemColor);
+		
+		Panel.add(MainPanel, BorderLayout.CENTER);
+		Panel.add(AddItemButton, BorderLayout.SOUTH);
+		Panel.add(AddItemButton, BorderLayout.SOUTH);
+		
+		add(Panel);
+		
+	}
+
+}
