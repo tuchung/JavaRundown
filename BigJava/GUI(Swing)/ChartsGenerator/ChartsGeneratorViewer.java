@@ -1,8 +1,12 @@
+import javax.swing.JFrame;
+
 
 public class ChartsGeneratorViewer {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		ChartsGeneratorFrame Frame = new ChartsGeneratorFrame();
+		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Frame.setVisible(true);
 
 	}
 

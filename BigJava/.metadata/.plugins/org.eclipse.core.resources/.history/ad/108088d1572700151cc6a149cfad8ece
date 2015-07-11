@@ -4,7 +4,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-@SuppressWarnings("serial")
 public class ChartsGeneratorFrame extends JFrame {
 	private JLabel Image;
 	private static final int FRAME_WIDTH = 300;
@@ -41,27 +40,12 @@ public class ChartsGeneratorFrame extends JFrame {
 		
 		//Will add functionality later*********************************
 		JMenuItem NewItem = new JMenuItem("New");
-		JMenu EditItem = new JMenu("Edit");
-		JMenu RemoveItem = new JMenu("Remove");
-		
-		class NewItemFunction implements ActionListener
-		{
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				NewItemFrame SubFrame = new NewItemFrame();
-				SubFrame.dispose();
-				SubFrame.setVisible(true);
-				
-			}
-			
-		}
-		NewItem.addActionListener(new NewItemFunction());
+		JMenuItem EditItem = new JMenuItem("Edit");
+		JMenuItem RemoveItem = new JMenuItem("Remove");
 		
 		ItemMenu.add(NewItem);
 		ItemMenu.add(EditItem);
 		ItemMenu.add(RemoveItem);
-		
 		
 		return ItemMenu;
 	}
