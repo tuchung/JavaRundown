@@ -2,7 +2,9 @@
 public class DrawingController {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		DrawingFrame Frame = new DrawingFrame();
+		Frame.setDefaultCloseOperation(Frame.EXIT_ON_CLOSE);
+		Frame.setVisible(true);
 
 	}
 

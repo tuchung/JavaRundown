@@ -1,0 +1,8 @@
+import javax.swing.*;
+public class DrawingFrame extends JFrame
+{
+	public DrawingFrame()
+	{
+		setSize(300, 400);
+	}
+}

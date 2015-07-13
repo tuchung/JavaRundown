@@ -1,0 +1,9 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class DrawingTask extends JPanel {
+
+	
+	public void paintC
+
+}

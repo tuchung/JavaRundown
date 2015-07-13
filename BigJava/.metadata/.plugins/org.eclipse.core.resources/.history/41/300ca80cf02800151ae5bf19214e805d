@@ -51,16 +51,6 @@ public class NewItemFrame extends JFrame {
 		AddItemButton = new JButton("Add Item");
 		CancelButton = new JButton("Cancel");
 		
-		class AddFunction implements ActionListener
-		{
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				
-				
-			}
-			
-		}
 		class CancelFunction implements ActionListener
 		{
 
