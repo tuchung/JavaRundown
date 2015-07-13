@@ -12,8 +12,6 @@ public class DrawingTask extends JPanel {
 		
 		g.setColor(Color.BLUE);
 		g.fillRect(25, 25, 100, 20);
-		g.setColor(Color.RED);
-		g.drawString("Microsoft", 125, 40);
 	}
 
 }

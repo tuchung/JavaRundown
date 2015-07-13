@@ -3,8 +3,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-//notes: coordinate within each bar(30, 40) 
-//coordinate after a bar(30+barlength, 40)
+
 @SuppressWarnings("serial")
 public class ChartsGeneratorFrame extends JFrame {
 	private JLabel Image;
