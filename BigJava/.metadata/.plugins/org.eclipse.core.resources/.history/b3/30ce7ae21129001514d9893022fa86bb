@@ -52,7 +52,6 @@ public class ChartsGeneratorFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				NewItemFrame SubFrame = new NewItemFrame();
 				SubFrame.dispose();
-				dispose();
 				SubFrame.setVisible(true);
 				
 			}
