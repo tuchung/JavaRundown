@@ -7,40 +7,34 @@ import javax.swing.JPanel;
 
 public class Palet extends JPanel {
 	Random rand = new Random();
-	private int count = 0;
-
-	
+	int count;
 	public Palet(int count)
 	{
-		this.setCount(count);
+		this.count = count;
 	}
-	
+
 	public void paintComponent (Graphics g)
 	{
 		super.paintComponent(g);
 		this.setBackground(Color.WHITE);
-		while(count > 0)
-		{
-			int randompointA = rand.nextInt(1001);
-			int randompointB = rand.nextInt(1001);
-			int randompointC = rand.nextInt(1001);
+		int i = count;
+		while(i > 0){
+			int randompointA = rand.nextInt(251);
+			int randompointB = rand.nextInt(251);
+			int randompointC = rand.nextInt(251);
+			int randompointD = rand.nextInt(251);
+			int randompointE = rand.nextInt(251);
+			
+			int[] xcor = {randompointA, randompointB, randompointC};
+			int[] ycor = {randompointD, randompointE, randompointD};
 			float red = rand.nextFloat();
 			float green = rand.nextFloat();
 			float blue = rand.nextFloat();
 			Color randomColor = new Color(red, green, blue);
 			g.setColor(randomColor);
-			g.fillPolygon(randompointA, randompointB, randompointC);
-			
+			g.fillPolygon(xcor, ycor, 3);
+			i--;
 		}
-		
-	}
-
-	public int getCount() {
-		return count;
-	}
-
-	public void setCount(int count) {
-		this.count = count;
 	}
 
 
