@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename source folder &apos;GUI(Java Swing)/src&apos; to &apos;BankAccountGUI&apos;&#x0D;&#x0A;- Original project: &apos;GUI(Java Swing)&apos;&#x0D;&#x0A;- Original element: &apos;GUI(Java Swing)/src&apos;&#x0D;&#x0A;- Renamed element: &apos;src&apos;" description="Rename source folder &apos;src&apos;" id="org.eclipse.jdt.ui.rename.source.folder" input="/src" name="BankAccountGUI" stamp="1436393203191" version="1.0"/>
-</session>
