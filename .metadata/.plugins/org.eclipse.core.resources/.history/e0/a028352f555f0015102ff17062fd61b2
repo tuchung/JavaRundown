@@ -1,0 +1,22 @@
+package Ring;
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
+
+import javax.swing.JComponent;
+
+@SuppressWarnings("serial")
+public class Ring extends JComponent
+{
+
+	public void paintComponent(Graphics g)
+	{
+		Graphics2D g2 = (Graphics2D) g;
+		Ellipse2D.Double FirstRing = new Ellipse2D.Double(10,10,30,30);
+		g2.setStroke(new BasicStroke(10));
+		g2.draw(FirstRing);
+	}
+
+}
+
+
+
