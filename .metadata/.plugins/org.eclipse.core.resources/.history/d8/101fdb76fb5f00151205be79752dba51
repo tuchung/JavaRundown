@@ -1,0 +1,9 @@
+package ComputeTriangle;
+
+public class Triangle {
+	
+	public Triangle()
+	{
+		
+	}
+}
