@@ -4,4 +4,12 @@
 <fullyQualifiedTypeName name="java.awt.Stroke"/>
 <fullyQualifiedTypeName name="java.awt.BasicStroke"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="ComputeTriangle.Triangle"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="ComputeTriangle.PromptFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="ComputeTriangle.TriangleFrameViewer"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
 </qualifiedTypeNameHistroy>
