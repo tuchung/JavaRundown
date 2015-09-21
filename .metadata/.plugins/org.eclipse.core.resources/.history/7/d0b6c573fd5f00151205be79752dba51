@@ -1,0 +1,37 @@
+package ComputeTriangle;
+
+public class Triangle {
+	private int x1, x2, x3, y1, y2, y3;
+	private int[] XCoordinate = new int[3];
+	private int[] YCoordinate = new int [3];
+	
+	public Triangle(int x1, int y1, int x2, int y2, int x3, int y3)
+	{
+		this.x1 = x1;
+		this.x2 = x2;
+		this.x3 = x3;
+		this.y1 = y1;
+		this.y2 = y2;
+		this.y3 = y3;
+		addToArray();
+	}
+	
+	private void addToArray() {
+		
+		XCoordinate[0] = x1;
+		XCoordinate[1] = x2;
+		XCoordinate[2] = x3;
+		YCoordinate[0] = y1;
+		YCoordinate[1] = y2;
+		YCoordinate[2] = y3;
+	}
+
+	public void print()
+	{
+		for(int i = 0; i < XCoordinate.length; i++)
+		{
+			System.out.println(XCoordinate[i]);
+		}
+		
+	}
+}
